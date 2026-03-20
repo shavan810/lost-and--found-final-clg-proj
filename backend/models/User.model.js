@@ -15,7 +15,9 @@ const userSchema = new mongoose.Schema({
   reputation: { type: Number, default: 100 },
   itemsReported: { type: Number, default: 0 },
   itemsReturned: { type: Number, default: 0 },
-  createdAt: { type: Date, default: Date.now }
+  createdAt: { type: Date, default: Date.now },
+  isAdmin: { type: Boolean, default: false },
+isBanned: { type: Boolean, default: false }
 }, { timestamps: true });
 
 userSchema.pre('save', async function (next) {

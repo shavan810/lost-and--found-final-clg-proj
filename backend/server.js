@@ -8,6 +8,8 @@ import matchRoutes from './routes/match.routes.js';
 import claimRoutes from './routes/claim.routes.js';
 import notificationRoutes from './routes/notification.routes.js';
 import { errorHandler } from './middleware/error.middleware.js';
+import adminRoutes from './routes/admin.routes.js';  // ← add with other imports
+
 
 dotenv.config();
 connectDB();
@@ -18,6 +20,8 @@ app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static('uploads'));
+app.use('/api/admin', adminRoutes);  // ← add with other routes
+
 
 // Routes
 app.use('/api/auth', authRoutes);
