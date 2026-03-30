@@ -67,6 +67,9 @@ export default function Login() {
           <p className="text-center text-sm text-slate-500 mt-6">
             Don't have an account? <Link to="/register" className="text-primary-600 font-medium hover:text-primary-700">Create one</Link>
           </p>
+                    <p className="text-center text-sm text-slate-500 mt-6">
+            <Link to="/admin" className="text-primary-600 font-medium hover:text-primary-700">Sign in to Admin Panel</Link>
+          </p>
         </div>
       </div>
     </div>
